@@ -18,6 +18,7 @@ namespace OWASP.WebGoat.NET
 			
 		private SqliteConnection GetGoatDBConnection ()
 		{
+			#Password is ThisIs@Pa$$w0rd
 			if (conn == null) {
 				//set the physical path to the SQLite database
 				string connectionstring = "Data Source=" + GoatDBFile;
