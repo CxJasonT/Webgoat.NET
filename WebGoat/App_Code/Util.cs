@@ -18,8 +18,8 @@ namespace OWASP.WebGoat.NET.App_Code
                 WorkingDirectory = Settings.RootDir,
                 FileName = cmd,
                 Arguments = args,
-                UseShellExecute = false,
-                RedirectStandardInput = true,
+                UseShellExecute = true,
+                RedirectStandardInput = false,
                 RedirectStandardError = true,
                 RedirectStandardOutput = true,
             };
