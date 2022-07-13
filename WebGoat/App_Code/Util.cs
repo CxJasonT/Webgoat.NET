@@ -23,7 +23,7 @@ namespace OWASP.WebGoat.NET.App_Code
                 RedirectStandardError = true,
                 RedirectStandardOutput = true,
             };
-
+            //this is a test
             using (Process process = new Process())
             {
                 process.EnableRaisingEvents = true;
