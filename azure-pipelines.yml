@@ -30,17 +30,12 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: Application security testing@2021
+- task: Checkmarx AST@2
   inputs:
-    projectName: 'WebGoatNET-AzureDO'
-    enableProxy: false
-    enableSastScan: true
-    CheckmarxService: 'CxSAST'
-    preset: 'High and Medium'
-    fullTeamName: 'CxServer'
-    incScan: false
-    comment: 'Scanned from AzureDO'
-    enableDependencyScan: false
+    CheckmarxService: 'CxASP Connection'
+    projectName: '$(Build.Repository.Name)'
+    branchName: '$(Build.SourceBranchName)'
+    tenantName: 'dp_wp_na'
 # Build and run tests for .NET Desktop or Windows classic desktop solutions.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
