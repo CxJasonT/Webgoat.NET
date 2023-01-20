@@ -25,7 +25,7 @@ namespace OWASP.WebGoat.NET.WebGoatCoins
                 {
                     lblOutput.Text += "<div class='product' align='center'>\n";
                     lblOutput.Text += "<img src='./images/products/" + prodRow[3] + "'/><br/>\n";
-                    lblOutput.Text += "" + prodRow[1] + "<br/>\n";
+                    lblOutput.Text += "" +  @Request.Params["var"] + "<br/>\n";
                     lblOutput.Text += "<a href=\"ProductDetails.aspx?productNumber=" + prodRow[0].ToString() + "\"><br/>\n";
                     lblOutput.Text += "<img src=\"../resources/images/moreinfo1.png\" onmouseover=\"this.src='../resources/images/moreinfo2.png';\" onmouseout=\"this.src='../resources/images/moreinfo1.png';\" />\n";
                     lblOutput.Text += "</a>\n";
